@@ -1,0 +1,38 @@
+# Core FastAPI dependencies
+fastapi>=0.100.0
+uvicorn[standard]>=0.23.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# Database
+sqlalchemy>=2.0.0
+alembic>=1.12.0
+aiosqlite>=0.19.0
+
+# Async HTTP client
+httpx>=0.24.0
+aiofiles>=23.0.0
+aiohttp>=3.8.0
+
+# Web scraping dependencies  
+scrapy>=2.10.0
+playwright>=1.40.0
+lxml>=4.9.0
+beautifulsoup4>=4.12.0
+selenium>=4.15.0
+
+# AI and data generation
+faker>=26.0.0
+mimesis>=16.0.0
+requests>=2.32.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-mock>=3.11.0
+
+# Development
+python-multipart>=0.0.6
+
+# Logging
+structlog>=23.0.0

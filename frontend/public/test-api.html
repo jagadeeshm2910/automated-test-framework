@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Connection Test</title>
+</head>
+<body>
+    <h1>API Connection Test</h1>
+    <div id="status">Testing...</div>
+    <button onclick="testConnection()">Test Again</button>
+    
+    <script>
+        async function testConnection() {
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerHTML = 'Testing...';
+            
+            try {
+                console.log('Testing fetch to backend...');
+                const response = await fetch('http://localhost:8000/health');
+                console.log('Response status:', response.status);
+                const data = await response.json();
+                console.log('Response data:', data);
+                
+                statusDiv.innerHTML = `✅ Connected! Status: ${data.status}, Time: ${data.timestamp}`;
+            } catch (error) {
+                console.error('Connection failed:', error);
+                statusDiv.innerHTML = `❌ Failed: ${error.message}`;
+            }
+        }
+        
+        // Test on page load
+        testConnection();
+    </script>
+</body>
+</html>
